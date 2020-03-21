@@ -62,10 +62,12 @@
       background: black;
       position: absolute;
       top: 50%;
-      transform-origin:100%;
-      transform:rotate(90deg);
-      transition:all 0.05s;
-      transition-timing-function: cubic-bezier(.1,2.7,.58,1);
+      
+      transform-origin:100%; /* adds the rotating point origin to the right end*/
+      transform:rotate(90deg);/* start from the the 12 o'clock */
+      transition:all 0.05s; /* show transition while going to next step */
+
+      transition-timing-function: cubic-bezier(.1,2.7,.58,1);/* how to show transition */
     }
 
   </style>
