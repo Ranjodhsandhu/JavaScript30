@@ -18,29 +18,58 @@
     }
 
     // Regular
-
+    console.log('hi');
     // Interpolated
-
+    console.log("Hi may work is %s great","❤️");
     // Styled
-
+    console.log(" i am %c a great text", "font-size:100px")
     // warning!
-
+    console.warn('this is the final warning');
     // Error :|
+    console.error('shist!!!');
 
     // Info
+    console.info('FYI');
 
     // Testing
+    console.assert(1 === 2,"This is wrong");
+    
 
     // clearing
+    console.clear();
 
     // Viewing DOM Elements
-
+    const p = document.querySelector('p');
+    console.log(p);
+    console.dir(p);
+    console.clear();
     // Grouping together
-
+    dogs.forEach(dog => {
+      console.groupCollapsed(`${dog.name}`);
+      console.log(`${dog.name}`);
+      console.log(`${dog.name} is ${dog.age} years old`);
+      console.log(`${dog.name} is ${dog.age * 4} dog years old`);
+      console.groupEnd(`${dog.name}`);
+    });
     // counting
-
+    console.count('rj');
+    console.count('rj');
+    console.count('rj');
+    console.count('rj');
+    console.count('rj');
+    console.count('jodh');
+    console.count('jodh');
+    console.count('jodh');
+    console.count('rj');
+    
     // timing
-
+    console.time('fetching data');
+    fetch('https://api.github.com/users/Ranjodhsandhu')
+        .then(data => data.json())
+        .then(data => {
+          console.timeEnd('fetching data');
+          console.log(data);
+        })
   </script>
 </body>
 </html>
